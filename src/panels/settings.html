@@ -1,11 +1,24 @@
 <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 <div class="settings-content">
-    <div class="tabs-settings-btn">
-        <button style="margin-top: 40px;" class="tab-btn-css tab-btn active-tab-btn default-tab-btn"> Comptes</button>
-        <button class="tab-btn-css tab-btn">Java</button>
-        <button class="tab-btn-css tab-btn">Launcher</button>
-        <button class="tab-btn-css save-tabs-btn">Sauvegarder</button>
+</div>
+<div class="sidebar">
+    <div class="account-side" aria-label="Connecté">
+      <img class="player-head account-side-img"/>
+      <div class="account-side-connected green"></div>
     </div>
+    <div class="box panels">
+      <div id="home" aria-label="Accueil" class=" button icon-home save-tabs-btn"></div>
+      <div aria-label="Paramètres" class="button-active settings-btn button icon-settings close"></div>
+      <div aria-label="Comptes" class="settings-btn button icon-user tab-btn active-tab-btn default-tab-btn"></div>
+      <div aria-label="Java" class="settings-btn button icon-hammer tab-btn "></div>
+      <div aria-label="Launcher" class="settings-btn button icon-folder tab-btn "></div>
+    </div>
+    <div class="box play">
+      <div aria-label="Sauvegarder" class="button icon-check save-tabs-btn1" style="color: green;"></div>
+    </div>
+  </div>
+  <div id="panels">
+  </div>
 
     <div class="tabs-settings-content active-tab-content">
         <div class="center-align">
@@ -16,14 +29,14 @@
 
     <div class="tabs-settings-content">
         <div class="settings-content-scroll">
-            <div class="title-settings">Paramètre de votre RAM.</div>
+            <div class="name-big" style="display: flex; justify-content: center; margin-bottom: 15px">Paramètre de votre RAM.</div>
             <div class="java-settings">
                 <div class="information">
                     Définition de la RAM alloué à votre jeu, une quantité plus important augmenteras les performances de votre jeu.<br> A noter qu'il faut éviter de mettre une trop grande quantité sinon cela peut provoquer des pertes de performances survos
                     autres applications.
                     <br><br>
                     <b>- RAM Maximale :</b> Indique la quantité totale de RAM allouée à votre jeu. Il est recommandé de ne pas dépasser 50% de la quantité totale de RAM présente sur votre PC afin qu'il puisse fonctionner correctement. Si votre ordinateur
-                    a plus de 8Go de RAM, nous vous recommandons d'allouer 3Go. Si votre ordinateur a 4Go ou moins, n'allouez pas plus de 2Go.<br><br>
+                    a plus de 8Go de RAM, nous vous recommandons d'allouer 4Go. Si votre ordinateur a 4Go ou moins, n'allouez pas plus de 2Go.<br><br>
                     <b>- RAM Minimale :</b> Indique la quantité minimale de RAM allouée au démarrage de votre jeu. Il est recommandé de ne pas mettre plus de 3Go pour cette valeur. La valeur typique est de 1Go.
                 </div>
                 <div class="ram-info">
@@ -50,8 +63,12 @@
 
     <div class="tabs-settings-content">
         <div class="center-page">
-            <div class="title-settings">Paramètre après le lancement du jeu.</div>
+            <div class="name-big" style="display: flex; justify-content: center; margin-bottom: 15px">Lancement du jeu.</div>
             <div class="java-settings">
+                <div class="information">
+                    Ici vous pouvez choisir l'interaction que le launcher a avec le jeu
+                    <br>
+                </div>
                 <div class="information">
                     <input type="checkbox" class="checkbox-settings" id="launcher-close"><label for="launcher-close"><div class="checkround"></div></label> Fermer le launcher après le lancement du jeu.</br>
                     <input type="checkbox" class="checkbox-settings" id="launcher-close-all"><label for="launcher-close-all"><div class="checkround"></div></label> Fermer le jeu si le launcher est fermé.</br>

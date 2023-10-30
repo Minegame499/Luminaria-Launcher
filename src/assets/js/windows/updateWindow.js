@@ -30,9 +30,11 @@ function createWindow() {
         transparent: os.platform() === 'win32',
         frame: false,
         show: false,
+        transparent: true, 
         webPreferences: {
             contextIsolation: false,
-            nodeIntegration: true
+            nodeIntegration: true,
+            devTools: process.env.NODE_ENV === 'dev'
         },
     });
     electron.Menu.setApplicationMenu(null);
